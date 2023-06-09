@@ -28,26 +28,23 @@ class MyApp extends StatelessWidget {
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
 }
-
 class MyHomePage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
+  Widget build(BuildContext context) {           // ← 1
+    var appState = context.watch<MyAppState>();  // ← 2
 
-    return Scaffold(
-      body: Column(
+    return Scaffold(                             // ← 3
+      body: Column(                              // ← 4
         children: [
-          Text('A random idea:'),
-          Text(appState.current.asLowerCase),
-
+          Text('A random AWESOME idea:'),        // ← 5
+          Text(appState.current.asLowerCase),    // ← 6
           ElevatedButton(
             onPressed: () {
               print('button pressed!');
             },
             child: Text('Next'),
           ),
-        ],
-
+        ],                                       // ← 7
       ),
     );
   }
