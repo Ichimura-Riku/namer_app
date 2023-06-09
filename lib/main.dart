@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const
             Text(
               'abc'
-            )
+            ),
             Text(
               'example change num:',
             ),
